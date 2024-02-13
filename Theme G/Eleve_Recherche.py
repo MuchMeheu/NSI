@@ -1,8 +1,9 @@
 from itertools import product
 from string import ascii_uppercase as alphabet
 
+"""
 def lister_mots(l=3):
-    """Renvoie une liste ordonnés de mots ayant l lettres"""
+
     return [''.join(lettres) for lettres in product(alphabet, repeat=l)]
 
 mots5 =  lister_mots(3)
@@ -54,3 +55,22 @@ def recherchedico(valeur,liste):
 
 print(recherchedico(3437,[23,36,34,236,75,4,53,231,23,353,5464,636,44234,213,2312,4326,3437,645233,14,647,5857,97,875,465,454,234,]))
 print (recherchedico("NSI",mots5))
+
+
+"""
+
+def indice_min_depuis(liste, indice):
+    indice_min = indice
+    for i in range(indice, len(liste)):
+        if liste[i] < liste[indice_min]:
+            indice_min = i
+    return indice_min
+
+def tri_selection(liste):
+        for i in range(len(liste)):
+            mini = i
+            for j in range(i+1, len(liste)):
+                if liste[j] < liste[mini]:
+                    mini = j
+            liste[i], liste[mini] = liste[mini], liste[i]
+        return liste
