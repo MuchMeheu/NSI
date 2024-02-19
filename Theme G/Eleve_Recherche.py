@@ -74,3 +74,20 @@ def tri_selection(liste):
                     mini = j
             liste[i], liste[mini] = liste[mini], liste[i]
         return liste
+
+
+
+def tri_iter(tab):
+    nb = len(tab) 
+    for i in range(1,nb):  # Parcours de la liste à partir de l'indice 1 jusqua la longeur de la liste
+        cle=tab[i] 
+        j=i
+        while j>0 and tab[j-1]>cle: # Tant que j est supérieur à 0 et que l'élément précédent est plus grand que cle
+            tab[j]=tab[j-1] # Décalage de l'élément précédent vers la droite
+            j=j-1 #soustraction de 1 a l'indice 
+            print(tab)
+        tab[j]=cle #placement de la cle a sa bonne position
+    return tab
+
+
+print(tri_iter([23,36,34,236,75,4,53,231,23,353,5464,636,44234,213,2312,4326,3437,645233,14,647,5857,97,875,465,454,234,]))
