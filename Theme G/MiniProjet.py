@@ -26,7 +26,17 @@ assert premiers_jusque(5) == [2, 3, 5]
 assert premiers_jusque(6) == [2, 3, 5]
 assert premiers_jusque(20) == [2, 3, 5, 7, 11, 13, 17, 19]
 
+print(eratosthene(5))
 print(premiers_jusque(20))
+
+
+
+
+
+
+
+
+
 
 #Sujet 2: 440 tri pascal
 
@@ -60,3 +70,4 @@ assert pascal(5) == [
 ]
 
 print(pascal(4))
+print(pascal(5))
